@@ -1,8 +1,9 @@
-import React, { useState, Component } from 'react';
-import RocketCore from './RocketCore';
+import React, { useState, Component } from "react";
+import RocketCore from "./RocketCore";
 
 export function FunctionalRocket() {
-  const [initialLaunchTime] = useState(Date.now());
+  // Set init value to 0
+  const [initialLaunchTime] = useState(0);
 
   return <RocketCore initialLaunchTime={initialLaunchTime} />;
 }
@@ -11,8 +12,9 @@ export class ClassRocket extends Component {
   constructor() {
     super();
 
+    // Set init state to 0
     this.state = {
-      initialLaunchTime: Date.now()
+      initialLaunchTime: 0,
     };
   }
 
